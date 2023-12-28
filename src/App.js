@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App">
       <main>
-        <button>show popup</button>
+        <button>Show popup</button>
       </main>
     </div>
   );
