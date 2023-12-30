@@ -16,7 +16,7 @@ function Popup(props) {
           
           <div className='name-box'>
             <p>Font Color</p>
-            <p2>#44444</p2>
+            <p2>#44455</p2>
             
             <button className='code-btn1'>Code</button>
           </div>
