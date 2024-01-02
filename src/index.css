@@ -14,3 +14,27 @@ main{
   justify-content: center;
   min-height: 100vh;
 }
+
+
+
+.show-button {
+  position: relative;
+  top: 60px;
+  right: 10px;
+  background-color: #727475;
+  color: #c8c4c4;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+@media screen and (max-width: 768px) {
+  .show-button {
+    position: static; /* Remove positioning for smaller screens */
+    margin-top: 20px; /* Adjusted margin for smaller screens */
+    margin-right: 10px; /* Adjusted margin for smaller screens */
+  }
+}
+

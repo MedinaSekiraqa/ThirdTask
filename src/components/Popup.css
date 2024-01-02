@@ -8,7 +8,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
   }
+  
+  @media screen and (max-width: 750px) {
+    .popup {
+        align-items: center; 
+        padding: 20px;
+    }
+  }
+
+
   
   .popup-inner {
     position: relative;
@@ -16,7 +26,10 @@
     width: 100%;
     max-width: 640px;
     background-color: #FFF;
+    border: none;
+    border-radius: 5px;
   }
+ 
   
   .popup-inner .close-btn {
     position: absolute;
@@ -24,19 +37,57 @@
     right: 16px;
   }
   
+  
+@media screen and (max-width: 768px) {
+  .popup-inner {
+      padding: 20px; 
+  }
+
+  .popup-inner .close-btn {
+      top: 10px;
+      right: 10px;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .popup-inner {
+      padding: 10px; 
+  }
+
+  .popup-inner .close-btn {
+      top: 5px;
+      right: 5px;
+      justify-content: space-between;
+  }
+}
   .popup-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
   
+   
+  
   .name-box {
+    align-items:center;
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 16px;
     border-bottom: 1px solid #ccc;
   }
+
+  @media screen and (max-width: 400px) {
+    .name-box {
+        flex-direction: column;  
+        align-items: flex-start; 
+       
+
+    }
+
+    
+}
   .code-btn1{
     background-color: #5f6061;
     color: #5f6061;
@@ -77,22 +128,40 @@
     margin-right: 16px;
   }
   
-  /* Additional styling for clarity */
+ 
   .popup-header h2{
     color: #383839;
     padding-bottom: 16px;
     margin-bottom: 16px;
   }
-  
+  @media screen and (max-width: 768px) {
+    .popup-header h2 {
+      font-size: 1.0rem; /* Adjust font size for smaller screens */
+      padding-bottom: 8px; /* Adjusted padding for smaller screens */
+      margin-bottom: 8px; /* Adjusted margin for smaller screens */
+    }
+  }
   .popup-title {
     font-size: 2.5rem;
     
   }
   
-  .name-box p .p2{
+  .name-box p {
     color: #6e6e6f; 
   }
-  
+
+  .div{
+    display: flex;
+    justify-content: space-between;
+    align-items:normal;
+  }
+  .div span{
+    margin-top: 10px;
+    margin-right: 10px;
+    color: #6e6e6f; 
+
+  }
+
 
 
   .close-btn {
@@ -104,4 +173,46 @@
     cursor: pointer; 
     font-size: 14px; 
   }
+  @media screen and (max-width: 768px) {
+    .close-btn {
+      font-size: 12px; 
+      padding: 6px 6px;  
+    }
+  }
   
+  .button-container {
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+    margin-top: 60px; 
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 450px) {
+    .button-container {
+        flex-direction: column; /* Display items in a column on smaller screens */
+        align-items: flex-end; /* Align items to the right on smaller screens */
+        margin-top: 30px; /* Adjusted margin for smaller screens */
+    }
+}
+
+.save-btn,
+.cancel-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Add margin between buttons on smaller screens */
+}
+
+.save-btn {
+    background-color: #007bff;
+    color: #e8ecf1;
+    margin-left: 10px; /* Reset margin for the left of the save button */
+}
+
+.cancel-btn {
+    background-color: #e3e6e9;
+    color: #666769;
+}
+
+
