@@ -15,6 +15,10 @@ function Popup(props) {
       <div className='popup-inner'>
         <div className='popup-header'>
           <h2>Theme Color</h2>
+
+          <button className='close-btn' onClick={() => props.setTrigger(false)}>
+            X
+          </button>
         </div>
         <div className='popup-content'>
         <div className='name-box'>
