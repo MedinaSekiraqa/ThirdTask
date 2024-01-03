@@ -164,21 +164,7 @@
 
 
 
-  .close-btn {
-    background-color: #545657; 
-    color: #ece7e7; 
-    padding: 8px 8px; 
-    border: none; 
-    border-radius: 10px; 
-    cursor: pointer; 
-    font-size: 14px; 
-  }
-  @media screen and (max-width: 768px) {
-    .close-btn {
-      font-size: 12px; 
-      padding: 6px 6px;  
-    }
-  }
+  
   
   .button-container {
     display: flex;

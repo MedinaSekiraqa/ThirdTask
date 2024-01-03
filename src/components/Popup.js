@@ -2,18 +2,23 @@ import React from 'react';
 import './Popup.css';
 
 function Popup(props) {
+  // Define a function to handle saving logic
+  const handleSave = () => {
+    // Add your save logic here
+    // For example, you can console.log a message for demonstration purposes
+    console.log('Saving changes...');
+    // Close the popup after saving (you can adjust this based on your needs)
+    props.setTrigger(false);
+  };
+
   return props.trigger ? (
     <div className='popup'>
       <div className='popup-inner'>
         <div className='popup-header'>
           <h2>Theme Color</h2>
-          
-          <button className='close-btn' onClick={() => props.setTrigger(false)}>
-            Close
-          </button>
         </div>
         <div className='popup-content'>
-          <div className='name-box'>
+        <div className='name-box'>
             <p>Font Color</p>
             <div className='div'>
               <span>#44455</span>
@@ -48,14 +53,12 @@ function Popup(props) {
               <button className='code-btn3'>Code</button>
             </div>
           </div>
-
-          {/* Cancel and Save buttons */}
-          
         </div>
-          <div className='button-container'>
-            <button className='cancel-btn'>Cancel</button>
-            <button className='save-btn' >Save</button>
-          </div>
+        <div className='button-container'>
+          <button className='cancel-btn' onClick={() => props.setTrigger(false)}>Cancel</button>
+          {/* Attach the handleSave function to the onClick event of the "Save" button */}
+          <button className='save-btn' onClick={handleSave}>Save</button>
+        </div>
       </div>
     </div>
   ) : null;
