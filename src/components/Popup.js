@@ -2,12 +2,11 @@ import React from 'react';
 import './Popup.css';
 
 function Popup(props) {
-  // Define a function to handle saving logic
+  
   const handleSave = () => {
-    // Add your save logic here
-    // For example, you can console.log a message for demonstration purposes
+    
     console.log('Saving changes...');
-    // Close the popup after saving (you can adjust this based on your needs)
+    
     props.setTrigger(false);
   };
 
@@ -56,7 +55,7 @@ function Popup(props) {
         </div>
         <div className='button-container'>
           <button className='cancel-btn' onClick={() => props.setTrigger(false)}>Cancel</button>
-          {/* Attach the handleSave function to the onClick event of the "Save" button */}
+          
           <button className='save-btn' onClick={handleSave}>Save</button>
         </div>
       </div>
